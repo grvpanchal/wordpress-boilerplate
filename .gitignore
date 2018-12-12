@@ -1,0 +1,8 @@
+plugins/*
+!plugins/custom-plugin/
+src/node_modules/
+src/bower_components/
+src/.sass-cache
+src/assets/css/theme-*
+uploads/*
+!uploads/README.md

@@ -1,0 +1,2 @@
+# Wordpress Boilerplate Database Setup #
+Keep all database dump for production into dump.sql.  whenever docker is ran the database is automatically loaded into MySQL via this folder. To make the production database work in local environment dump-localize.sql is added. Just add the domain name in dump-localize.sql that needs to be replaced.

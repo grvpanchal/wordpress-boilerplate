@@ -1,0 +1,2 @@
+# Paste Production uploads folder here.
+Uploads folder is skipped by repo as this folder contains assets that are uploaded by client. If image are not visible just get a copy of assets from production and paste it under uploads folder. 
