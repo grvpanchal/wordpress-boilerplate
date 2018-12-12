@@ -1,4 +1,4 @@
-# Worpress Boilerplate #
+# Wordpress Boilerplate #
 
 This is default boilerplate for working on any wordpress project. The setup is built on docker to streamline setup of wordpress changes. The setup includes wordpress theme is from underscores.me which a basic starter theme for any wordpress. The environment of LAMP Stack is set by Docker. The selection of version of wordpress is made by wordpress docker image. Along with wordpress image, mysql image and phpMyAdmin are used aswell to prevent the hassel of deploying for developers
 
