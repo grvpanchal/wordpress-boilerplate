@@ -59,15 +59,15 @@ Whenever we recieve a project that was already built by third party follow the i
     ./src:/var/www/html/wp-content/themes/{{theme_folder_name}} 
     ```
 3. Compare the production and Update .htaccess and wp-config.php as per requirement for development.
-4. Check whether the source code of any plugins were modified. If they were, just include them in repository by pasting them in plugin folder and updating them in `.gitignore` file like below.
-    ```
-    !plugins/{plugin_name}/
-    ```
-5. For unmodified plugins retrieved from marketplace, use wp-cli commands to create a CSV of installed plugins using a separate LAMP Stack of origin.
+4. For unmodified plugins retrieved from marketplace, use wp-cli commands to create a CSV of installed plugins using a separate LAMP Stack of origin.
     ```
     wp plugin list --format=csv > plugins.csv
     ```
     Now replace the existing plugins.csv with your generated one.
+5. Check the CSV and include the plugins in repo which are not in marketplace. Also check whether the source code of any plugins were modified. If they were, just include them in repository by pasting them in plugin folder and updating them in `.gitignore` file like below.
+    ```
+    !plugins/{plugin_name}/
+    ```
 6. Copy the contents of wp-content/uploads folder to uploads folder. `.gitignore` file update is NOT required.
 7. Update the dump.sql with latest production dump.
 8. Update the domain name in dump-localize.sql that needs to be replaced.
