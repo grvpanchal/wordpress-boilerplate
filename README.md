@@ -14,6 +14,8 @@ Windows and Mac: https://nodejs.org/en/download/
 
 Ubuntu: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages
 
+Note: You require wp-cli to migrate an existing project. Get the cli tool from: https://wp-cli.org/#installing
+
 ## Environment and Directory Configuration ##
 
 The Enviroment of LAMP is created on docker and the repo access of wordpress is limited to theme, plugins and uploads. The wordpress core file are not included in repo as they should not be modified. Docker maps the wordpress locations to respective location in repo
@@ -61,9 +63,14 @@ Whenever we recieve a project that was already built by third party follow the i
     ```
     !plugins/{plugin_name}/
     ```
-5. Copy the contents of wp-content/uploads folder to uploads folder. `.gitignore` file update is not required.
-6. Update the dump.sql with latest production dump.
-7. Update the domain name in dump-localize.sql that needs to be replaced.
-8. If any further files are required that are outside theme folder, just update the mapping inside `docker-compose.yml` file.
+5. For unmodified plugins retrieved from marketplace, use wp-cli commands to create a CSV of installed plugins using a separate LAMP Stack of origin.
+    ```
+    wp plugin list --format=csv > plugins.csv
+    ```
+    Now replace the existing plugins.csv with your generated one.
+6. Copy the contents of wp-content/uploads folder to uploads folder. `.gitignore` file update is NOT required.
+7. Update the dump.sql with latest production dump.
+8. Update the domain name in dump-localize.sql that needs to be replaced.
+9. If any further files are required that are outside theme folder, just update the mapping inside `docker-compose.yml` file.
 
 This document should be updated if any changes are made for boilerplate.

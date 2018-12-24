@@ -21,6 +21,8 @@ services:
       - ./uploads:/var/www/html/wp-content/uploads
       - ./wp-config.php:/var/www/html/wp-config.php
       - ./.htaccess:/var/www/html/.htaccess
+      - ./plugins.csv:/var/www/html/plugins.csv
+      - ./plugins.sh:/var/www/html/plugins.sh
       - ./plugins:/var/www/html/wp-content/plugins
     ports:
       - "8080:80"
