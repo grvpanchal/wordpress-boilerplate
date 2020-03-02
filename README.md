@@ -2,12 +2,11 @@
 
 This is default boilerplate for working on any wordpress project. The setup is built on docker to streamline setup of wordpress changes. The setup includes wordpress theme is from underscores.me which a basic starter theme for any wordpress. The environment of LAMP Stack is set by Docker. The selection of version of wordpress is made by wordpress docker image. Along with wordpress image, mysql image and phpMyAdmin are used aswell to prevent the hassel of deploying for developers
 
-## Prerequesites ##
+## Prerequisite ##
 
 Below are the prerequisites required before you begin with the project setup.
 
 ### Docker ###
-Follow installtion guide from here: https://docs.google.com/document/d/11l3rZKEvBy_Ll3w7Z9PlHaLNePVyTDI0lIRC9KtqLdM/edit?usp=sharing
 
 ### NodeJS ###
 Windows and Mac: https://nodejs.org/en/download/
